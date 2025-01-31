@@ -29,7 +29,6 @@ def get_content(url):
     return resp
 
 def get_basic_infos(soup):
-    
     div_page = soup.find("div", class_ = "td-page-content")
     paragrafo = div_page.find_all("p")[1]
     ems =  paragrafo.find_all("em")
@@ -41,12 +40,16 @@ def get_basic_infos(soup):
     return data
 
 def get_aparicoes(soup):
-    lis = (soup.find("div", class_ = "td-page-content")
+    lis = (soup.find("div", class_="td-page-content")
                .find("h4")
                .find_next()
                .find_all("li"))
 
-    aparicoes = [i.text for i in lis]
+    if not lis:
+        print("Nenhuma aparição encontrada.")
+        return []
+
+    aparicoes = [i.text.strip() for i in lis if i.text.strip()]
     return aparicoes
 
 def get_personagem_infos(url):

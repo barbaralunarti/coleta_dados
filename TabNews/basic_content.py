@@ -16,7 +16,7 @@ def get_response(**kwargs):
 
 # Save data in two different formats in their respective folders (json and parquet)
 def save_data(data, option='json'):
-    now = datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S.%f") # filename with hours, minutes, seconds, and milliseconds
+    now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S.%f") # filename with hours, minutes, seconds, and milliseconds
     
     if option == 'json':
         with open (f"json/{now}.json", 'w') as open_file:
@@ -29,7 +29,7 @@ def save_data(data, option='json'):
 # %%
 
 page = 1 # start on page 1 to fetch the most recent data
-date_stop = pd.to_datetime('2024-08-01') # set a limit date for data fetch
+date_stop = pd.to_datetime('2020-01-01') # set a limit date for data fetch
 while True:
     print(page)
     resp = get_response(page=page, per_page=100, strategy="new")
@@ -48,9 +48,5 @@ while True:
         print(resp.status_code)
         print(resp.json())
         time.sleep(60 * 15) # pause for 15 minutes before retrying
-        
 
-        
-
-
-
+# %%

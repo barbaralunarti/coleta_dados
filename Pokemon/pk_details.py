@@ -16,7 +16,7 @@ spark = (SparkSession.builder.appName("Python Spark SQL basic example")
 
 # %%
 
-path = "C:/Users/babilun/Desktop/coleta_dados/Pokemon/pokemon_list/pokemon_list.csv"
+path = "C:/yourdirectory/coleta_dados/Pokemon/pokemon_list/pokemon_list.csv"
 poke = spark.read.csv(path, header=True, inferSchema=True)
 poke.show()
 
@@ -38,7 +38,7 @@ def save_pokemon(data):
     now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S.%f")
     data["date_ingestion"] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     id_value = data.get('id', 'unknown')  # Use 'unknown' if 'id' is missing
-    filename = f"C:/Users/babilun/Desktop/coleta_dados/Pokemon/pokemon_list/poke_url/{id_value}_{now}.json"
+    filename = f"C:/yourdirectory/coleta_dados/Pokemon/pokemon_list/poke_url/{id_value}_{now}.json"
     try:
         with open (filename, "w") as open_file:
             json.dump(data, open_file)

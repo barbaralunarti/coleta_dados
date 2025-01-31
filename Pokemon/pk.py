@@ -27,7 +27,7 @@ class Collector:
     def save_data(self, data):
         now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S.%f")
         data["ingestion_date"] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        filename = f"C:/Users/babilun/Desktop/coleta_dados/Pokemon/{self.instance}/{now}.json"
+        filename = f"C:/yourdirectory/coleta_dados/Pokemon/{self.instance}/{now}.json"
         with open(filename, "w") as openfile:
             json.dump(data, openfile)
             
@@ -67,7 +67,7 @@ spark = (SparkSession.builder.appName("Python Spark SQL basic example")
 
 # %%
 
-json_dir = "C:/Users/babilun/Desktop/coleta_dados/Pokemon/pokemon/"
+json_dir = "C:/yourdirectory/coleta_dados/Pokemon/pokemon/"
 files = [os.path.join(json_dir, f) for f in os.listdir(json_dir) if f.endswith(".json")]
 df = spark.read.json(files)
 df.show()
@@ -100,7 +100,7 @@ latest_pokemon_df.show(truncate=False)
 
 # %%
 
-path = "C:/Users/babilun/Desktop/coleta_dados/Pokemon/pokemon_list/pokemon_list.csv"
+path = "C:/yourdirectory/coleta_dados/Pokemon/pokemon_list/pokemon_list.csv"
 
 # Convert the PySpark DataFrame to a Pandas DataFrame and save it as a CSV file
 poke_pd = latest_pokemon_df.toPandas()

@@ -92,7 +92,7 @@ spark = (SparkSession.builder.appName("Python Spark SQL basic example")
 # %%
 
 # Acessar diretório e ler os arquivos .json
-json_dir = "C:/Users/babilun/Desktop/coleta_dados/JovemNerd/episodios/json/"
+json_dir = "C:/yourdirectory/coleta_dados/JovemNerd/episodios/json/"
 files = [os.path.join(json_dir, f) for f in os.listdir(json_dir) if f.endswith(".json")]
 df = spark.read.json(files)
 df.show()
