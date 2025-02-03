@@ -36,13 +36,13 @@ Após a coleta, os arquivos JSON são lidos utilizando `Apache Spark`, permitind
 📌 1. Classe Collector  
 A classe `Collector` é responsável por gerenciar a coleta e armazenamento dos dados.
 
-`__init__()` – Configura a URL base e o nome da instância.
-`get_content()` – Faz uma requisição GET para obter os dados.
-`save_parquet()` – Salva os dados coletados no formato Parquet.
-`save_json()` – Salva os dados no formato JSON.
-`save_data()` – Escolhe o formato de salvamento (json ou parquet).
-`get_and_save()` – Obtém os dados e os salva se a requisição for bem-sucedida.
-`auto_exec()` – Executa a coleta de forma automática até atingir a data limite.
+`__init__()` – Configura a URL base e o nome da instância.  
+`get_content()` – Faz uma requisição GET para obter os dados.  
+`save_parquet()` – Salva os dados coletados no formato Parquet.  
+`save_json()` – Salva os dados no formato JSON.  
+`save_data()` – Escolhe o formato de salvamento (json ou parquet).  
+`get_and_save()` – Obtém os dados e os salva se a requisição for bem-sucedida.  
+`auto_exec()` – Executa a coleta de forma automática até atingir a data limite.  
 
 📌 2. Execução do Coletor  
 ```python  
