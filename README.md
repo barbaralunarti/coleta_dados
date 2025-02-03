@@ -1,4 +1,4 @@
-coleta_dados – Explorando Dados de Diversos Universos 🌍📊
+## coleta_dados – Explorando Dados de Diversos Universos 🌍📊
 
 Bem-vindo ao repositório coleta_dados, um projeto dedicado à coleta e análise de dados a partir de diferentes fontes online!
 
