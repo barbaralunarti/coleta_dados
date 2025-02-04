@@ -25,7 +25,7 @@ coleta_dados/
 
 ### 🚀 **Executando os Códigos:**
 
-📌 01_ Coleta de Dados da PokéAPI
+📌 01_ Coleta de Dados da PokéAPI 📝
 
 ◽️ Este primeiro código realiza a coleta automática dos dados dos Pokémon utilizando a PokéAPI. Ele:
 
