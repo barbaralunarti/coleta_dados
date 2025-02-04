@@ -16,11 +16,10 @@ coleta_dados/
 │   │   ├── pokemon_list.csv  # Lista de Pokémon e URLs
 │   │   ├── locations_pk.csv  # Locais onde os Pokémon podem ser encontrados
 │   │   ├── gráficos  # Imagens geradas pelas análises
-│   ├── scripts/
-│   │   ├── 01_pk.py  # Coleta os dados da API
-│   │   ├── 02_pokemon_data.py  # Processa e visualiza os dados
-│   │   ├── 03_pk_details.py  # Obtém detalhes dos Pokémon
-│   │   ├── 04_choose_pokemon.py  # Mini game interativo
+│   ├── 01_pk.py  # Coleta os dados da API
+│   ├── 02_pokemon_data.py  # Processa e visualiza os dados
+│   ├── 03_pk_details.py  # Obtém detalhes dos Pokémon
+│   ├── 04_choose_pokemon.py  # Mini game interativo
 ```
 
 ### 🚀 **Executando os Códigos:**
