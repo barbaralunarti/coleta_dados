@@ -19,7 +19,7 @@ coleta_dados/
 │   ├── scripts/
 │   │   ├── 01_pk.py  # Coleta os dados da API
 │   │   ├── 02_pokemon_data.py  # Processa e visualiza os dados
-│   │   ├── 03_pokemon_details.py  # Obtém detalhes dos Pokémon
+│   │   ├── 03_pk_details.py  # Obtém detalhes dos Pokémon
 │   │   ├── 04_choose_pokemon.py  # Mini game interativo
 ```
 
